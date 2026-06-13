@@ -24,7 +24,7 @@ RCON_PORT        = 25923
 RCON_PASSWORD    = "rMIJOBLqFq"
  
 # Telegram (для уведомлений об автооплате)
-BOT_TOKEN        = "ТВОЙ_ТОКЕН_БОТА"
+BOT_TOKEN        = "7945405277:AAEbywt7eFG41SVvx4rSIfQsug3MDE5KSn0"
 ADMIN_IDS        = [7186618502]
  
 # Файл хранения платежей (Railway сбрасывает память при рестарте)
