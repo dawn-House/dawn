@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask
 
 app = Flask(__name__)
 
@@ -9,9 +9,3 @@ def home():
 @app.route('/health')
 def health():
     return 'OK'
-
-@app.route('/yoomoney', methods=['POST'])
-def yoomoney_notification():
-    print("Получен запрос на /yoomoney")
-    print(request.form.to_dict())
-    return "OK", 200
