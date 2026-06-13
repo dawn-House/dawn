@@ -1,18 +1,16 @@
-from flask import Flask, request, jsonify
+from flask import Flask
 
-# ... твой существующий код бота и приложения ...
+# ЭТА СТРОКА ОБЯЗАТЕЛЬНА - создаём экземпляр приложения
+app = Flask(__name__)
 
-@app.route('/yoomoney', methods=['POST'])
-def handle_yoomoney_notification():
-    """
-    Обрабатывает HTTP-уведомления от YooMoney.
-    """
-    data = request.form.to_dict() # Уведомления приходят в формате form-data
-    print(f"Получено уведомление: {data}") # Отлично подходит для отладки
+@app.route('/')
+def home():
+    return 'Dawn House работает!'
 
-    # Здесь будет логика проверки подписи и активации покупки
-    # label = data.get('label')
-    # if verify_signature(data):
-    #     activate_purchase(label)
+@app.route('/health')
+def health():
+    return 'OK', 200
 
-    return "OK", 200
+# Только для локального запуска (на Railway эту часть не используют)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
