@@ -1,9 +1,18 @@
-from flask import Flask
-app = Flask(__name__)
+from flask import Flask, request, jsonify
 
-@app.route('/')
-def home():
-    return 'Dawn House работает!'
+# ... твой существующий код бота и приложения ...
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+@app.route('/yoomoney', methods=['POST'])
+def handle_yoomoney_notification():
+    """
+    Обрабатывает HTTP-уведомления от YooMoney.
+    """
+    data = request.form.to_dict() # Уведомления приходят в формате form-data
+    print(f"Получено уведомление: {data}") # Отлично подходит для отладки
+
+    # Здесь будет логика проверки подписи и активации покупки
+    # label = data.get('label')
+    # if verify_signature(data):
+    #     activate_purchase(label)
+
+    return "OK", 200
