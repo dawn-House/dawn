@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Данные из личного кабинета YooMoney (замени на свои!)
 YOOMONEY_WALLET = "410011234567890"  # Номер вашего кошелька
-YOOMONEY_SECRET = "ваше_секретное_слово"  # Из настроек уведомлений
+YOOMONEY_SECRET = "tUJj4wjTMYdDexqAn5WG61N4"  # Из настроек уведомлений
 
 # Хранилище ожидающих платежей (временно)
 pending_payments = {}
